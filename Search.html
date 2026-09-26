@@ -1,0 +1,212 @@
+<html>
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Search </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style> 
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 220px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            gap: 15px
+            
+        }
+        .temp{
+            position: absolute;
+            top: 25px; 
+            right: 22px;
+            font-size: 22px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+        }
+        .city{
+            position: absolute;
+            top: 54px; 
+            right: 22px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            color:rgb(91, 107, 240)
+        }
+        .time{
+            font-family: 'PT Mono', monospace;
+            font-size:45px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            font-variant-numeric: tabular-nums;
+            font-family: 'Inter', sans-serif;
+        }
+        .name{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-family: 'Inter', sans-serif;
+            color:rgb(91, 107, 240)
+        }
+        .plus{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            font-size: 25px;
+            color: rgba(107, 114, 128, 0.626);
+            text-decoration: none;
+            line-height: 1;
+            font-family: inherit;
+        }
+        .icons a{
+            width: 52px;
+            height: 52px;
+            display: flex;            
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 149, 150, 0.27);
+        }
+        
+        .search{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            color:rgba(107, 114, 128, 0.626);
+            border-radius:14px;
+            width: 464px;
+            height: 52px;
+            font-family: 'Inter', sans-serif;
+            background-color:rgb(255, 255, 255);
+            border: 1px solid rgba(148, 149, 150, 0.27);
+            gap: 5px;
+        }
+        .icons img{
+            object-fit: contain;
+        }
+        .search img{
+            margin-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .time{
+                font-size:38px;
+            }
+            .search{
+                width: 76%;
+                height: 25px;
+                max-width: 400px;
+                margin-bottom: -12px;
+                padding: 12px 16px;
+                font-size: 15px;
+                margin-top: 150px
+            }
+   
+            .search img{
+                margin-left: 1px;
+                width: 20px;
+            }
+            .name{
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .icons{
+                flex-wrap: wrap;
+                padding: 0 15px;
+                gap: 20px
+            }
+            .icons a{
+                width: 42px;
+                height: 42px;
+            }
+            .icons img{
+                width: 25px;
+                height: 25px;
+            }
+            .temp{
+                top: 15px;
+                right: 6px;
+                font-size: 18px;
+            }
+            .city{
+                top: 40px;
+                right: 6px;
+                font-size: 12px;
+            }
+            .icons a.plus{
+                display: none;
+            }
+            body{
+                overflow-x: hidden;
+            }
+            .icons a.in{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p class = "temp"> 36° </p>
+    <p class="city"> Ahmedabad </p>
+    <h2>  <div class ="time"> 09:11:01 </div> </h2>
+    <h3> <div class = "name"> Good Morning, Saad. </div> </h3>
+    <div class = "search" > 
+        <img width="23"
+            src = "https://avatars.mds.yandex.net/i?id=29c818ae22ac7e621c18c82915b2c63279847486-10844270-images-thumbs&n=13">
+        <p> Search </p>
+    </div>
+
+    <div class ="icons">
+        <a href="https://www.youtube.com" target = "_blank"> 
+            <img width="40"
+                src = "https://avatars.mds.yandex.net/i?id=a89164bcdbb9fc0fcc4ac95dc4a6f725bf62a5ee-4446390-images-thumbs&n=13" >
+        </a>
+
+    <a href="https://chatgpt.com/," target = "_blank"> 
+        <img width="25"
+            src = "https://avatars.mds.yandex.net/i?id=287305d3894bcffdc89d0ca43914f878574809df-5213474-images-thumbs&n=13" >
+    </a>
+
+    <a href="https://ya.ru/?npr=1&utm_referrer=https%3A%2F%2Fyandex.ru%2F" target = "_blank"> 
+        <img width="30"
+            src = "https://avatars.mds.yandex.net/i?id=b21264dceda384fba4c0f6dd247f2b97d2c4bad4-12423448-images-thumbs&n=13" >
+    </a>
+
+    <a href="https://chat.deepseek.com" target = "_blank"> 
+        <img width="30"
+            src = "https://avatars.mds.yandex.net/i?id=50d2a9f6ef414d5cf6f66053e8c31b49caf3b7d0-3530254-images-thumbs&n=13" >
+    </a>
+
+    <a href="https://github.com" target = "_blank"> 
+        <img width="30"
+            src = "https://avatars.mds.yandex.net/i?id=f714dcef811b3e43fcedc046f95a629dc5913cee-4900921-images-thumbs&n=13" >
+    </a>
+
+    <a href="https://www.linkedin-status.com" target = "_blank" class="in"> 
+        <img width="40"
+            src = "https://static.vecteezy.com/system/resources/previews/032/329/176/non_2x/linkedin-icon-logo-symbol-free-png.png" >
+    </a>
+    <a href="#" class="plus">+</a>
+    </div>
+    
+</body>
+
+</html>
