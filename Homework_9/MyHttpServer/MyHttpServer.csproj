@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+		  <None Update="settings.json">
+			  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  </None>
+		  <None Update="static\**\*.*">
+			  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  </None>
+	  <None Update="Templates\**\*.*">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Framework\core\" />
+    <Folder Include="Framework\settings\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiniHttpServer.ORM\MiniHttpServer.ORM.csproj" />
+    <ProjectReference Include="..\MiniTemplatesEngine\MiniTemplateEngine.csproj" />
+  </ItemGroup>
+
+</Project>
