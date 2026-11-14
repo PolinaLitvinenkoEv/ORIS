@@ -1,0 +1,497 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        }
+        .top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #171d25;
+            height: 104px;
+            width: 100%;
+        }
+        .left-top{
+            display: flex;
+            align-items: center;
+        }
+        .text-top a{
+            text-decoration: none;
+            margin-left: 7px;
+            color:#dcdedf;
+        }
+        .text-top a:hover{
+            color: aliceblue;
+        }
+        .shop{
+            margin-left: 60px;
+            margin-right: 8px;
+            margin-top: 5px;
+            color:#1a9fff;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 3px solid #1a9fff;
+            padding-bottom: 2px;
+        }
+        .img-steam{
+            margin-left: 155px;
+            font-weight: 500;
+            line-height: 16px;
+        }
+        .right-top{
+            display: flex;
+            flex-direction: row;
+            margin-right: 156px;
+        }
+        .entrance{
+            display: flex;
+            flex-direction: row;
+            margin-top: 14px;
+            gap: 12px;
+            font-size: 13px;
+            padding-left: 10px;
+        }
+        .entrance a{
+            color: #dcdedf;
+            text-decoration: none;
+            font-size: 11px;
+            gap: 15px;
+        }
+        .entrance a:hover{
+            color:aliceblue;
+        }
+        .divider{
+            width: 1px;
+            height: 12px;
+            background-color: #dcdedf;
+        }
+        .lang{
+            display: flex;
+            gap: 1px;          
+        }
+        .lang img{
+            width: 20px;
+            height: 15px;
+            margin-top: -3px;
+            cursor: pointer;
+        }
+        .button{
+            display: flex;
+            align-items: center;
+            background-color: #5c7e10;
+            color: #dcdedf;
+            width: 142px;
+            height: 25px;
+            margin-top: 7px;
+            border-radius: 1px;
+            cursor: pointer;
+        }
+        .button a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color:#dcdedf;
+            font-size: 11px;
+            padding-left: 5px;
+            gap: 10px;
+        }
+        .button:hover{
+            color: aliceblue;
+            background-color: #6c9018;
+        }
+       .button img{
+            padding-left: 7px;
+       }
+       .button span{
+            padding-right: -2px;
+            font-weight: 530;
+       }
+       .top-after{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color:#182535;
+            height: 50px;
+            width: 100%;
+            gap:145px;
+            box-shadow: 
+            inset 0 0.5px 0 rgba(0, 0, 0, 0.338),   
+            inset 0 -1.5px 0 rgba(0, 0, 0, 0.338); 
+       }
+       .text-top-after a{
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            color:aliceblue;
+            font-size: 13px;
+            display: flex;
+            align-items: center;   
+            white-space: nowrap;      
+            transition: color 0.2s;
+            gap:6px
+       }
+       .text-top-after{
+            display: flex;
+            align-items: center;
+            margin-left:156px;
+            gap:21px;
+       }
+       .arrow-down{
+            width: 13px;
+            height: 13px;
+            transition: transform 0.2s ease;
+            display: inline-block;
+       }
+       .text-top-after a:hover .arrow-down {
+            transform: translateY(2px);
+        }
+       .Search{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            align-items: stretch;
+       }
+       .Search-text{
+            flex:1;
+            display: flex;
+            align-items: center;
+            border-right: 0.1px solid #6b798200;
+            background-color: #6b79825b;
+            border-radius: 2px 0 0 2px;
+            border: 0.1px solid #dcdedf66;
+            height: 35px;
+            width: 445px;
+            margin-left: 10px;
+       }
+       .Search-text:hover{
+            border-color:  #1a9fff;
+       }
+       .Search p{
+            display:flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #dcdedf;
+            border-radius: 4px;
+            font-style: italic;
+            font-size: 13px;
+            font-weight: 540;
+            padding: 0 12px;
+       }
+       .Search svg{
+            width: 19px;                    
+            height: 19px;
+            display: block;
+       }
+       .icon-search:hover{
+            background-color: #43b0fe;
+       }.icon-search:hover svg{
+             width: 23px;                    
+            height: 23px;
+            display: block;
+            transition: width 0.2s ease, height 0.2s ease;
+       }
+       .icon-search{
+            width: 35px;                   
+            height: 35px;
+            margin-left: auto;
+            background-color: #1a9fff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            padding: 0;
+        }
+        .center{
+            position: relative;
+            background-image: radial-gradient(ellipse at center, 
+            rgba(23, 29, 37, 0) 0%,    
+            rgba(23, 29, 37, 0.4) 60%,  
+            rgba(23, 29, 37, 0.85) 100%  
+            ),url('../Images/new_login_bg_strong_mask.jpg');
+            background-size:130% auto;
+            background-position:49% 3%;
+            background-repeat: no-repeat;
+            min-height: calc(100vh - 154px);
+            padding: 50px 160px;
+            padding-bottom: 160px;
+        }
+        .center h2{
+            color:#fff;
+            margin-left:205px;
+            margin-top: 50px;
+            font-weight: 800;
+            font-size: 26px;
+        }
+        .center-body{
+            background-color: #181a21;
+            border-radius: 4px;
+            padding: 24px 32px;
+            flex:1;
+            width: 815px;
+            height: 338px;
+            margin-top:45px;
+            margin-left:190px;
+            display: grid;
+            grid-template-columns: 550px 1fr;
+        }
+        .Zag{
+            color: #1999ff;
+            font-size:12px;
+            padding-bottom: 5px;
+        }
+        .hr{
+            border: 1px solid #32353c;
+            border-radius: 2px;
+            padding:10px;
+            background-color: #32353c;
+            height: 39.2px;
+            cursor: text;
+        }
+        .hr:hover{
+            background-color: #3b3e45
+        }
+        .left-center{
+            padding-right:40px
+        }
+        .password{
+            color:#afafaf;
+            font-size:12px;
+            padding-bottom: 5px;
+            padding-top: 20px;
+            cursor: default;
+        }
+        .QR{
+            color: #1999ff;
+            font-size:12px;
+            padding-bottom: 5px;
+        }
+        .right-center img{
+            border-color:#fff;
+            position: relative;
+            width: 198.8px;
+            height: 198.8px;
+            border: 10px solid #fff;
+            border-radius: 7.5px;
+        }
+        .remember{
+            color:#afafaf;
+            font-size: 12px;
+            user-select:none;
+            padding-left: 6px;
+        }
+        .checkmark svg{
+            width: 14px;
+            height: 14px;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Remember-me{
+            display: flex;
+            align-items: center;
+            gap: 1px;
+            margin-top: 10px;
+        }
+        .checkmark{
+            width: 20px;
+            height: 20px;
+            background-color: #32353c;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .checkmark:hover{
+            background-color: #3b3e45;
+        }
+        .entrance-btn{
+            position: relative;
+            background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+            border-radius: 2px;
+            border: none;
+            outline: none;
+            padding: 12px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: inherit;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 280px;
+            height: 47.2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 125px;
+        }
+        .entrance-btn:hover{
+            background: linear-gradient(90deg, #47cbfb 0%, #5089f4 100%);
+        }
+        .help{
+            text-decoration: none;
+            color:#afafaf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            font-size: 12px;
+            display: inline-block;
+            border-bottom: 1px solid #afafaf;
+            margin-left: 165px;
+        }
+        .help:hover{
+            color:rgb(200.5,200.5,200.5)
+            
+        }
+        .mobile{
+            text-decoration: none;
+            color:#afafaf;
+            border-bottom: 1px solid #afafaf;
+        }
+        .mobile:hover{
+            color:rgb(200.5,200.5,200.5)
+        }
+        .QR-bottom{
+            color:#afafaf;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 7px;
+            line-height: 19px;
+        }
+        .bottom{
+            background-color: #181A21;
+        }
+        .separation{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:40px;
+        }
+        .first{
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+            margin-top: 70px;
+        }
+        .separation-left{
+            margin-left:10px
+        }
+        .separation-after{
+            margin-top: 40px;
+            margin-left: 80px;
+            display: grid;
+            grid-template-columns: 283px 1fr;
+            padding-bottom: 40px;
+            gap:180px
+        }
+        .Steam a, .Valve a, .Pravo a, .Dop a{
+            font-size: 13px;
+            color:#8b929a;
+            text-decoration: none;
+        }
+        .Steam a:hover, .Valve a:hover, .Pravo a:hover, .Dop a:hover{
+             color:#66c0f4;
+        }
+        .Steam p, .Valve p, .Pravo p, .Dop p{
+            color:#b8bcbf;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .Steam, .Valve, .Pravo, .Dop{
+            line-height: 32px;
+        }
+        .separation-right{
+            margin-top: 60px;
+            color:#b8b6b4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .separation-right a{
+            color:#afafaf;
+            text-decoration: none;
+            border-bottom: 1px solid #afafaf;
+            border-bottom-width: 0.5px;
+        }
+        .separation-right a:hover{
+            color: white;
+            border-bottom: none;
+        }
+        .account{
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+            border-radius: 2px;
+            border: none;
+            width: 153.95px;
+            height: 30px;
+            margin-top: 15px;
+            margin-left:40px;
+            text-decoration: none;
+        }
+        .account:hover{
+            background: linear-gradient(90deg, #47cbfb 0%, #5089f4 100%);
+        }
+        .Text-Steam-Valve{
+            font-size: 11px;
+        }
+        .separation-after-right{
+            margin-right:80px;
+            display: flex;
+            flex-direction: row;
+            gap:65px;
+        }
+        .separation-after-left p{
+            line-height: 16px;
+            color:#b8b6b4;
+        }
+        .icons{
+            color:#8b929a;
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            gap:35px;
+            text-decoration: none;
+            margin-left:-86px;
+        }
+        .social-icon{
+            color:#8b929a;
+        }
+        .social-icon:hover{
+            color:#66c0f4;
+        }
+        .social-icon svg{
+            display:block;
+        }
+        .Valve-img{
+            display: flex;
+            color:#8b929a;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 25px;
+            gap:30px;
+        }
+        .brand-icon{
+            color:#8b929a;
+            display:flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .brand-icon:hover{
+            color:#66c0f4;
+        }
+        .brand-icon svg{
+            display: block;
+        }

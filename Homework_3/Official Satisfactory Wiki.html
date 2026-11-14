@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Satisfactory Wiki</title>
+    <style> 
+        @font-face {
+            font-family: "Satisfontory";
+            src: url("Img/Satisfontory_v1.5.ttf");
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            font-family: sans-serif;
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            background-color: #000538;
+            height: 35px;
+            position: fixed;
+            top:0;
+            left:0;
+            right: 0;
+            z-index:1000;
+        }
+        .left{
+            display:flex;
+            align-items:center;
+            gap:14px
+        }
+        .game span{
+            font-size: 14px;
+            color: rgb(251, 249, 249);
+        }
+        .game{
+            display: flex;
+            align-items: center;
+            gap:8px;
+        }
+        .game a{
+            display: flex;
+            align-items: center;
+            height: 20px;
+            padding: 6px 12px;
+            border-radius:5px;
+            background-color:rgba(255, 255, 255, 0.2);
+            text-decoration:none;
+        }
+        .game a:hover{
+            background-color: rgba(255, 255,255,0.2);
+        }
+        .Wiki{
+            display:flex;
+            align-items:center;
+            margin-left: 7px;
+            margin-top: 2px;
+            border:none
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .right a{
+            color:white;
+            margin-left: 10px;
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 500;
+        }
+        .right a:hover{
+            text-decoration: underline;
+        }
+        .right img{
+            margin-right: 4px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            border-radius:6px;
+            background: transparent;
+            border:none;
+            cursor:pointer;
+        }
+        .right img:hover{
+            background-color: rgba(255,255,255,0.2);
+        }
+        .divider{
+            width: 1px;
+            height: 18px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 2px;
+        }
+        .logo{
+            display:flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .navigation p{
+            padding: 0.45em 0;
+            padding-bottom: 3px;
+            color:aliceblue;
+            display:flex;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+        }
+        .navigation{
+            width: 140px;
+            border-radius:10px;
+            background-color:rgb(26, 26, 26);
+            padding-bottom: 6px;
+        }
+        .navigation ul a{
+            text-decoration: none;
+            padding-top: 0.4em;
+            font-size: 13px;
+            color: #e59344;
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 0.75em;
+            line-height: 1.125em;
+            gap: 5px;
+        }
+        .navigation ul a:hover{
+            text-decoration: underline;
+        }
+        .Usefulpages p{
+             padding: 0.25em 0;
+            color:aliceblue;
+            display:flex;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+        }
+        .Usefulpages{
+            width: 140px;
+            border-radius:10px;
+            background-color:rgb(26, 26, 26);
+        }
+        .Usefulpages ul a{
+           text-decoration: none;
+            padding-top: 0.3em;
+            font-size: 13px;
+            color: #e59344;
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 0.75em;
+            line-height: 1.125em;
+            gap: 5px;
+        }
+        .Usefulpages ul a:hover{
+            text-decoration: underline;
+        }
+        .Satisfactorylinks p{
+             padding: 0.25em 0;
+            color:aliceblue;
+            display:flex;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+        }
+        .Satisfactorylinks{
+            width: 140px;
+            border-radius:10px;
+            background-color:rgb(26, 26, 26);
+        }
+        .Satisfactorylinks ul a{
+            text-decoration: none;
+            padding-top: 0.3em;
+            font-size: 13px;
+            color: #e59344;
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 0.75em;
+            line-height: 1.125em;
+            gap: 5px;
+        }
+        .Satisfactorylinks ul a:hover{
+            text-decoration: underline;
+        }
+        .Tools{
+            width: 140px;
+            border-radius:10px;
+            background-color:rgb(26, 26, 26);
+        }
+        .Tools p{
+             padding: 0.25em 0;
+            color:aliceblue;
+            display:flex;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+        }
+        .Tools ul a:hover{
+            text-decoration: underline;
+        }
+        .Whatlinkshere::before{
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 16px;                               
+            background: url('Img/skrepka1.png') no-repeat center / contain;
+            vertical-align: middle;              
+        }
+        .Whatlinkshere{
+            margin-top: 2px;
+        }
+        .Newpage::before{
+            content: '';
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            background: url('Img/page1.png') no-repeat center / contain;
+            vertical-align: middle;   
+        }
+        .Specialpages::before{
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('Img/specialpages1.png') no-repeat center / contain;
+            vertical-align: middle;  
+        }
+        .Newpage::before,.Specialpages::before{
+            margin-left: -3px;;
+        }
+        .Whatlinkshere::before{
+            margin-left: -2px;
+        }
+        .Newpage a,.Specialpages a, .Whatlinkshere a{
+            margin-left: -2px;
+        }
+        .Databasedata a{
+            margin-left: -3px;
+        }
+        .Specialpages , .Whatlinkshere,.Databasedata {
+            margin-top: -2px;
+        }
+        .Databasedata::before{
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('Img/database1.png') no-repeat center / contain;                        
+            vertical-align: middle;  
+        }
+        .Tools ul a{
+            text-decoration: none;
+            padding-top: 0.3em;
+            font-size: 13px;
+            color: #e59344;
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 0.75em;
+            display: flex;                        
+            align-items: center; 
+            gap: 5px;
+        }
+        .Inotherlanguages p{
+             padding: 0.25em 0;
+            color:aliceblue;
+            display:flex;
+            justify-content: center;
+            font-size: 14px;
+            text-align: center;
+        }
+        .Inotherlanguages{
+            width: 140px;
+            border-radius:10px;
+            background-color:rgb(26, 26, 26);
+        }
+        .Inotherlanguages ul a{
+            text-decoration: none;
+            padding-top: 0.3em;
+            font-size: 13px;
+            color: #e59344;
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 0.75em;
+            line-height: 1.125em;
+            gap: 5px;
+        }
+        .Inotherlanguages ul a:hover{
+            text-decoration: underline;
+        }
+        .divider1{
+            width: 138px;
+            height: 0.5px;
+            background-color: #e59344;
+            margin: 0 2px;
+        }
+        .separation{
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 20px;
+            margin-left: 18px;
+            margin-top: 10px;
+            padding-bottom: 40px;
+        }
+        .tabl{
+            display: flex;
+            flex-direction: column;  
+            gap: 12px;
+        }
+        .Main{
+            display: flex;
+            flex-direction: column;
+            background: rgb(26, 26, 26);
+            border-radius: 16px;
+            margin-right: 18px;
+        }
+        .tops{
+            display:flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background: rgb(26, 26, 26);
+            border-radius: 16px 16px 0 0;
+            border-bottom: 1px solid #e59344;
+            padding: 0;
+            padding-left: 18px;
+            padding-right: 18px;
+            overflow: visible;
+            flex-wrap: wrap;
+        }
+        .top-left{
+            display:flex;
+            align-items: center;
+        }
+        .top-right{
+            display:flex;
+            align-items: center;
+        }
+        .MainPage{
+            padding:12px 8px;
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid #e59344;
+            border-radius: 0;
+            background-color: #e59344;
+        }
+        .discussion{
+            padding: 12px 20px;
+            text-decoration: none;
+            color:#e59344;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .discussion:hover{
+            text-decoration: underline;
+        }
+        .search{
+            display:flex;
+            align-items: center;
+            height: 30px;
+            width: 290px;
+            background: #414040;
+            border-radius:2px;
+            border: 0.5px solid #e59344;
+            padding: 0 6px;
+            
+        }
+        .search span{
+            font-size: 13px;
+            color:rgba(151, 150, 150, 0.89);
+        }
+        .search img{
+            margin-left:105px;
+            width: 30px;
+        }
+        .search:hover{
+            border-color:#e47b19;
+            box-shadow: 0 0 8px rgba(229, 147, 68, 0.1);
+        }
+        .bunner{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: #040404;
+            height: 70px;
+            width: 600px;
+            margin:20px auto 10px auto;
+        }
+        .bunner a{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 14px;
+            color: #e59344;
+        }
+        .bunner a:hover{
+            text-decoration: underline;
+        }
+        .PinkBunner{
+            display:flex;
+            align-items: center;
+            background: rgba(78, 8, 78, 0.675);
+            border:0.5px solid rgb(82, 12, 44);
+            border-radius: 4px;
+            padding: 20px 14px; 
+            color:aliceblue;
+            width: 1220px;
+            height: 90px;
+            overflow: hidden; 
+            margin: 7px auto 0 auto;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .PinkBunner img{
+            height: 85px;                            
+            width: auto;                            
+            flex-shrink: 0
+        }
+        .textBunner{
+            margin-left:10px;
+        }
+        .textBunner p{
+            margin-top: 7px;
+        }
+        .textBunner a{
+            text-decoration: none;
+            color:rgb(15, 242, 166);
+        }
+        .textBunner a:hover{
+            text-decoration: underline;
+        }
+        .area{
+            display: flex;                          
+            gap: 7px;                               
+            margin:  0 20px 15px 20px;;                           
+            align-items: flex-start;                 
+        }
+        .col-left{
+            flex: 600px;                                
+            display: flex;                          
+            flex-direction: column;                                               
+        }
+
+        .col-right{
+            flex: 320px;                                
+            display: flex;
+            flex-direction: column;
+        }
+        .welcome{
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: 20px;
+        }
+        .welcome-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.13em;
+            left: -0.13em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.9em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .welcome-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .welcome-head{
+            position: relative;
+            background: url('Img/Bolt.png') no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #46546195, #4f4136a5);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+       
+        .welcome-head h1{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 37px;
+            line-height: 1.6;
+            color: #fff;
+            margin: 0;
+            margin-top:5px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+            background-size: 100% 55px;                   
+            background-repeat: repeat; 
+        }
+        .welcome-body p{
+            color: #cfcece;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .welcome-body{
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        .welcome-body a{
+            text-decoration: none;
+            color: #e59344;
+            text-align: center;
+        }
+        .welcome-body a:hover{
+            text-decoration: underline;
+        }
+        .updates{
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: 22px;
+        }
+        .updates-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .updates-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .updates-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .updates-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin: 0;
+            margin-top:5px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .updates-body p{
+            color: #cfcece;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 8px;               
+            padding-bottom: 0;
+        }
+        .updates-body{
+            padding-bottom: 90px;  
+        }
+        .updates-body a{
+            text-decoration: none;
+            color: #e59344;
+            text-align: center;
+        }
+        .updates-body a:hover{
+            text-decoration: underline;
+        }
+        .updates-body img{
+            margin-left: 105px;
+            margin-top: 10px;
+        }
+        .about{
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: -25px;
+        }
+        .Goat::after{
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;                                
+            background: url('Img/Wikipedia.svg') no-repeat right top / contain;
+        }
+        .Sanctum::after{
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;                 
+            background: url('Img/strelka1.png') no-repeat right top / contain;
+        }
+        .about-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .about-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .about-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .about-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 22px;
+            color: #fff;
+            margin: 0;
+            margin-top:3px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .about-body p{
+            color: #cfcece;
+            font-size: 14px;
+            text-align:left;
+            margin-left: 5px;
+            line-height: 1.6;
+            padding-top: 8px;
+            
+        }
+        .about-body{
+            padding-bottom: 10px;
+        }
+        .about-body a{
+            text-decoration: none;
+            color: #e59344;
+            text-align: center;
+        }
+        .about-body a:hover{
+            text-decoration: underline;
+        }
+        .video{
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: 5px;
+        }
+        .video-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .video-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .video-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .video-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 23px;
+            color: #fff;
+            margin: 0;
+            margin-top:2px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .features{
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: -120px;
+        }
+        .features-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .features-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .features-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .features-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin: 0;
+            margin-top:5px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .features-body ul{
+            list-style-type: disc;
+            list-style-position: inside;    
+            padding-left: 0;                   
+            margin: 0;
+            color: #cfcece;
+            font-size: 14px;
+            text-align:left;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            line-height: 1.5;
+        }
+        .features-body a{
+            text-decoration: none;
+            color: #e59344;
+            text-align: center;
+        }
+        .features-body a:hover{
+            text-decoration: underline;
+        }
+        .featuresarticles{
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: 20px;
+        }
+        .featuresarticles-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .featuresarticles-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .featuresarticles-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .featuresarticles-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 24px;
+            margin: 0;
+            margin-top:2px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .featuresarticles-body a{
+            text-decoration: none;
+            color: #e59344;
+            text-align: center;
+            display: flex;
+        }
+        .featuresarticles-body a:hover{
+            text-decoration: underline;
+        }
+        .featuresarticles-body{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);    
+        }
+        .featuresarticles-body img{
+            width: 91px;
+            margin-bottom: 10px;
+        }
+        .Images{
+            display: flex;
+            flex-direction: column;                    
+            align-items: center;                        
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .featuresarticles-body span{
+            font-size: 14px;;
+        }
+        .socialmedia{
+             display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin-top: 7px;
+            padding-bottom: 82px;
+        }
+        .socialmedia-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .socialmedia-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .socialmedia-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            background-origin: border-box;
+            background-clip: border-box;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+         .socialmedia-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+            margin: 0;
+            margin-top:2px;
+            margin-bottom: 5px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+       .hr{
+            height: 1px;
+            background-color: var(#604d3e, #a2a9b1);
+            border: 0;
+            margin: 0.2em 0;
+            box-sizing: content-box;
+            overflow: visible;
+            display: block;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            color: #624f41;
+            unicode-bidi: isolate;
+            overflow: hidden;
+            border-style: inset;
+            border-width: 1px;
+            }
+       .Images-head{
+            display: flex;                  
+            justify-content: center;    
+            align-items: center;       
+            gap: 15px;                         
+            flex-wrap: wrap;                   
+            padding: 15px 0; 
+       }
+       .Images-body{
+            display: flex;                  
+            justify-content: center;  
+            align-items: center;         
+            gap: 15px;                         
+            flex-wrap: wrap;                   
+            padding: 15px 0; 
+            max-width: 280px;            
+            margin: 0 auto; 
+       }
+        .video-body{
+            padding: 0 15px 100px;
+        }
+
+        .video-placeholder{
+            position: relative;
+            background: #f0f0f0;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #888;                 
+            border-radius: 0;
+            cursor: pointer; 
+            text-decoration: none;
+        }
+        .load-video{
+            padding: 12px 24px;
+            background: #555555;                       
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            user-select: none;
+        }
+        .load-video a{
+            text-decoration: none;
+        }
+        .load-video:hover{
+            background: #4a7fc1;                       
+        }
+        .video-source{
+            position: absolute;
+            bottom: 8px;                            
+            left: 8px;
+            background: #555555;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .navigation-block{
+            position: relative;
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin: 20px 20px 20px 20px;
+            margin-top:0px;
+        }
+        .navigation-block::before{
+            content: "";
+            position: absolute;
+            left: 5px;                             
+            top: 0;
+            bottom: 5px;
+            width: 0.5px;
+            background-color: #e59344;
+            pointer-events: none;
+        }
+        .navigation-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .navigation-block::after{
+            content: "";
+            position: absolute;
+            right: 5px;                             
+            top: 43px;
+            bottom: 5px;
+            width: 0.5px;
+            background-color: #e59344;
+            pointer-events: none;
+        }
+        .navigation-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .navigation-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            background-origin: border-box;
+            background-clip: border-box;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .nav-head-line{
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            bottom: -1px;
+            height: 0.5px;
+            background-color: #e59344;
+            z-index: 5;
+            pointer-events: none;
+        }
+        
+        .navigation-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+            margin: 0;
+            margin-top:7px;
+            margin-bottom: 7px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .nav-row{
+            position: relative;                      
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            gap: 12px;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .nav-row::after{
+            content: "";
+            position: absolute;
+            left: 5px;                            
+            right: 5px;                             
+            bottom: 5px;
+            height: 0.5px;
+            background-color: #e59344;              
+        }
+        .nav-row a{
+            color: #e59344;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .nav-row a:hover{
+            text-decoration: underline;
+        }
+        .nav-controls{
+            display: flex;
+            align-items: center;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .nav-controls a{
+            color: #e59344;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: underline;               
+            text-decoration-style: dashed;             
+            text-decoration-color: #e59344; 
+        }
+        .nav-controls .dot{
+            color: #fefcfc;
+            font-size: 18px;
+            user-select: none;
+        }
+        .nav-title{
+            font-size: 14px;
+            color: #cfcece;
+            line-height: 1.5;
+            text-align: center;        
+            font-weight: 700;             
+        }
+        .nav-title a{
+            color: #e59344;
+            font-weight: 700;
+        }
+        .nav-title a:hover{
+            text-decoration: underline;
+        }
+        .nav-expand{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1px;
+            font-size: 13px;
+        }
+        .nav-expand a{
+            color: #e59344;
+            text-decoration: none;
+        }
+        .nav-expand a:hover{
+            text-decoration: underline;
+        }
+        .nav-expand .bracket{
+            color: #fbfaf9;
+            user-select: none;
+        }
+        .Community{
+            position: relative;
+            display: grid;
+            background: #313030;
+            border: 1px solid;
+            border-radius: 20px 20px 6px 6px;
+            margin: 20px 20px 20px 20px;
+            margin-top:0px;
+        }
+        .community-head::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -0.11em;
+            left: -0.11em;
+            content: "";
+            background: url(Img/Corner_top_left.png) no-repeat top left border-box;
+            background-size: 0.7em;
+            z-index: 3;
+            pointer-events: none;
+        }
+        .community-head::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 30px 30px 1px 1px;
+            background: url(Img/Texture.png) repeat;
+            opacity: 0.05;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .community-head{
+            position: relative;
+            background: url(Img/Bolt.png) no-repeat bottom left border-box, url(Img/Bolt.png) no-repeat bottom right border-box, url(Img/Middle.png) repeat-x center left border-box, linear-gradient(to bottom, #465461, #4F4136);
+            font-size: 1.7em;
+            letter-spacing: .025em;
+            padding: 0 1em;
+            box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.25);
+            background-size: 0.6em, 0.6em, 1px 0.3em, auto;
+            border-radius: 0.7em 20px 0 0;
+        }
+        .community-head h2{
+            position: relative;
+            font-family: 'Satisfontory', "Noto Sans", system-ui, sans-serif;
+            color: #f2f2f2;
+            background: -webkit-linear-gradient(bottom, #ADC8DD, #FEFFFE, #E2E9EF);
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 2;
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+            margin: 0;
+            margin-top:7px;
+            margin-bottom: 7px;
+            filter: 
+            drop-shadow(0.2px 0.2px 0 #000)
+            drop-shadow(-0.2px -0.2px 0 #000)
+            drop-shadow(0.2px -0.2px 0 #000)
+            drop-shadow(-0.2px 0.2px 0 #000);
+        }
+        .community-body{
+            padding: 20px 25px;
+        }
+        .community-buttons{
+            display: flex;
+            justify-content:space-around;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        .community-btn{
+            padding: 14px 20px;
+            background:radial-gradient(#555555, #000);;
+            box-shadow: inset 0 0 2px #000;
+            border: 3px double var(--wiki-content-dynamic-color--inverted);
+            border-radius: 10px / 20px;
+            border: 1px;
+            text-align: center;
+            color: #e59344;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            width: 300px;
+        }
+        .community-btn:hover{
+            color: #fb8c24;
+            border-color: #df8027;
+            text-decoration: underline;
+            background: #000;
+        }
+        .community-text{
+            color: #cfcece;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            margin-top: 5px;
+        }
+        .create-page{
+        display: flex;
+        gap: 8px;
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+        }
+        .hr1{
+            height: 1px;
+            width: calc(100% + 40px);
+            background-color: (#604d3e, #4e3f34);
+            border: 0;
+            margin: 0 0 0 -20px;      
+            margin-top: -20px;         
+            display: block;
+            color: #624f41;
+            unicode-bidi: isolate;
+            overflow: hidden;
+            border-style: inset;
+            border-width: 1px;
+            }
+        .create-page::before{
+            content: "";
+            flex: 1;
+            background: #000;
+            border: 0.5px solid #ed9d52d4;
+            border-radius: 2px;
+        }
+        .create-page button{
+            padding: 10px 25px;
+            background: #a2a0a0;
+            color: #000;
+            border: none;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            white-space: nowrap;
+            transition: 0.2s;
+        }
+        .create-page button:hover{
+            background: #bbb;
+        }
+        .create-page:hover::before{
+            border-color: #de7d06;
+        }
+        .community-list{
+            color: #cfcece;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .community-list-title{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #fff;
+        font-weight: 600;
+        margin-left: -25px;
+        }
+        .adding{
+            color: #cfcece;
+            font-size: 18px;
+            line-height: 1;
+            margin-right: 4px;
+        }
+        .community-list ul{
+            list-style-type: circle;
+            list-style-position: inside;
+            line-height: 1.4;
+            color: #cfcece;
+            margin-left: -2px;
+        }
+        .community-list li{
+            margin-bottom: 8px;
+        }
+        .community-list li::marker{
+            color: #cfcece;
+        }
+        .community-category{
+            padding: 15px 20px;
+            border: 1px solid #e59344;
+            border-radius: 1px;
+            color: #cfcece;
+            font-size: 14px;
+            margin-bottom: 5px;
+            background-color: #313030;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: -20px;
+        }
+        .community-category a{
+            color: #e59344;
+            text-decoration: none;
+            margin-left: -5px;
+        }
+        .community-category a:last-child{
+            margin-left: 5px;
+        }
+        .community-category a:hover{
+            text-decoration: underline;
+        }
+        .main-page-sections{
+            font-size: 12px;
+            color: #cfcece;
+            text-align: right;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            margin-top: -20px;
+            margin-right: 20px;
+        }
+        .main-page-sections a{
+            color: #e59344;
+            text-decoration: none;
+            transition: 0.15s;
+        }
+        .main-page-sections a:hover{
+            text-decoration: underline;
+        }
+        .bunner-com{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: #040404;
+            height: 70px;
+            width: 600px;
+            margin:20px auto 10px auto;
+        }
+        .bunner-com a{
+            color: #e59344;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .bunner-com a:hover{
+            text-decoration: underline;
+        }
+        .footer{
+            grid-column: 2 / 3;
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin: 20px 18px 40px 0;
+            color: #cfcece;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: -5px;
+        }
+        .footer-info{
+            margin-bottom: 12px;
+        }
+        .footer-info a{
+            color: #e59344;
+            text-decoration: none;
+        }
+        .footer-info a:hover{
+            text-decoration: underline;
+        }
+        .footer-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .footer-links{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a{
+            color: #e59344;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .footer-links a:hover{
+            text-decoration: underline;
+        }
+        .footer-img{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: end;
+            margin-right: -10px;
+            flex-direction: row;
+        }
+        .footer-img a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 6px 10px;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="left">
+            <a class="Wiki" href="Official Satisfactoru Wiki.html">   
+                <img 
+                    width="115"
+                    src="Img/top.png"
+                    alt="wiki.gg"
+                >
+            </a>
+            <div class="game"> 
+                <a href="https://www.indiedeals.gg"> 
+                    <img width="15" src="Img/boy.png">   
+                    <span>Indie game deals</span>    
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <img 
+                width="30"
+                src="Img/moon.png"
+            >
+            <div class="divider"> </div>
+            <a href="https://satisfactory.wiki.gg/wiki/Special:CreateAccount?returnto=Satisfactory+Wiki">Create account</a>
+            <a href="https://satisfactory.wiki.gg/wiki/Special:UserLogin?returnto=Satisfactory+Wiki">Log in</a>
+        </div>
+    </div>
+    <a class="logo" href="Official Satisfactoru Wiki.html"> 
+        <img width="260" src ="Img/logo.png" alt="Satisfactory Wiki">
+    </a>
+    <div class ="separation">  
+        <div class ="tabl">
+            <div class="navigation"> 
+                <p> Navigation </p>
+                <div class = "divider1"> </div>
+                <div> 
+                    <ul class = "link-nav"> 
+                        <li><a href="Official Satisfactoru Wiki.html" target="_blank"> Main page </a> </li>
+                        <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Community_portal" target="_blank"> Community portal </a> </li>
+                        <li><a href="https://satisfactory.wiki.gg/wiki/Special:RecentChanges" target="_blank"> Recent changes </a> </li>
+                        <li><a href="https://satisfactory.wiki.gg/wiki/Patch_0.1.7" target="_blank"> Random page </a> </li>
+                        <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Admin_noticeboard" target="_blank"> Admin noticeboard </a> </li>
+                        <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Rules" target="_blank"> Wiki rules </a> </li>
+                        <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Style_guide" target="_blank"> Style guide </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Usefulpages"> 
+                <p> Useful pages </p>
+                <div class = "divider1"> </div>
+                <ul> 
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Category:Buildings" target="_blank"> Buildings </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Category:Items" target="_blank"> Items </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Category:Fluids" target="_blank"> Fluids </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Milestones" target="_blank"> Milestones </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/MAM" target="_blank"> MAM </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/AWESOME_Sink" target="_blank"> AWESOME Sink </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Space_Elevator" target="_blank"> Space Elevator </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Power" target="_blank"> Power </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Future_content" target="_blank"> Future content </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Online_tools" target="_blank"> Community tools </a> </li>
+                </ul>
+            </div>
+            <div class="Satisfactorylinks"> 
+                <p> Satisfactory links </p>
+                <div class = "divider1"> </div>
+                <ul> 
+                    <li><a href="https://www.satisfactorygame.com" target="_blank"> Official website </a> </li>
+                    <li><a href="https://questions.satisfactorygame.com" target="_blank"> Q&A site </a> </li>
+                    <li><a href="https://lizarddoggo.com/en-eu" target="_blank"> Official merch </a> </li>
+                    <li><a href="https://store.steampowered.com/app/526870/Satisfactory/" target="_blank"> Steam </a> </li>
+                    <li><a href="https://store.epicgames.com/p/satisfactory?lang=en-US" target="_blank"> Epic Games Store</a> </li>
+                    <li><a href="https://www.humblebundle.com/store/satisfactory" target="_blank"> Humble Bundle </a> </li>
+                    <li><a href="https://www.xbox.com/en-US/games/store/satisfactory/9NPR2CG6S95Q" target="_blank"> Xbox </a> </li>
+                    <li><a href="https://www.xbox.com/en-US/games/store/satisfactory/9NPR2CG6S95Q" target="_blank"> Play Station </a> </li>
+                </ul>
+            </div>
+            <div class="Tools"> 
+                <p> Tools </p>
+                <div class = "divider1"> </div>
+                <ul> 
+                    <li><a class="Whatlinkshere" href="https://satisfactory.wiki.gg/wiki/Special:WhatLinksHere/Satisfactory_Wiki" target="_blank"> What links here </a> </li>
+                    <li><a class ="Newpage" href="https://satisfactory.wiki.gg/wiki/Special:NewPage" target="_blank"> New page </a> </li>
+                    <li><a class="Specialpages" href="https://satisfactory.wiki.gg/wiki/Special:SpecialPages" target="_blank"> Special pages </a> </li>
+                    <li><a class="Databasedata" href="https://satisfactory.wiki.gg/wiki/Special:DatabaseData/Satisfactory_Wiki" target="_blank"> Database data </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=info" target="_blank"> Page information </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Special:CiteThisPage?page=Satisfactory_Wiki&id=56208&wpFormIdentifier=titleform" target="_blank"> Cite this page </a> </li>
+                    <li><a href="#" target="_blank"> Expand all </a> </li>
+                </ul>
+            </div>
+            <div class="Inotherlanguages"> 
+                <p> In other languages </p>
+                <div class = "divider1"> </div>
+                <ul> 
+                    <li><a href="https://satisfactory.wiki.gg/de/" target="_blank"> Deutsch </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/fr/" target="_blank"> Français </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/ru/" target="_blank"> Русский </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/pt" target="_blank"> Português </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/it" target="_blank"> Italiano </a> </li>
+                    <li><a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/zh" target="_blank"> 中文 </a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "Main">
+            <div class="tops">
+                <div class = "top-left">
+                    <a href="Official Satisfactoru Wiki.html" class="MainPage">Main page</a>
+                    <a href="https://satisfactory.wiki.gg/wiki/Talk:Satisfactory_Wiki" class="discussion">Discussion</a>
+                </div>
+                <div class="top-right">
+                    <a href="https://satisfactory.wiki.gg" class="MainPage">Read</a>
+                    <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=edit" class="discussion">View source</a>
+                    <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki?action=history" class="discussion">View history</a>
+                    <div class="search">
+                        <span>Search Satisfactory Wiki</span> 
+                        <img src="Img/search1.png">
+                    </div>
+                </div>
+            </div>
+            <div class = "bunner">
+                <a href="#">Реклама</a>
+            </div>
+            <div class ="PinkBunner"> 
+                <img  src="Img/front.png">
+                <div class ="textBunner"> 
+                    <h3>wiki.gg SATELLITE #4 accepting responses:</h3>
+                    <p>Help improve wiki.gg by <a href="https://docs.google.com/forms/d/e/1FAIpQLScje1659bVAO_Gailgoj0QG2iUw8hx31SP85gJOp8GypAwFoA/viewform">filling out a survey</a>!</p>
+                </div>
+            </div>
+            <div class ="area"> 
+                <div class="col-left">
+                    <div class ="welcome">
+                        <div class="welcome-head">
+                            <h1>WELCOME TO THE OFFICIAL <br>SATISFACTORY WIKI</h1>
+                        </div>
+                        <div class ="welcome-body">
+                            <p>the <i>Satisfactory</i> guide and information source written and maintained by the community.</p>
+                            <p>We are currently maintaining <a href = "https://satisfactory.wiki.gg/wiki/Special:Statistics"> 9,466 pages (865 articles).</a></p>
+                            <p>Please feel free to contribute by creating new articles or expanding existing ones.</p>
+                            <p>Also check out the wiki in other languages:</p>
+                            <p> <a href="https://satisfactory.wiki.gg/de/">Deutsch</a> • <a href="https://satisfactory.wiki.gg/fr/"> Français</a> • <a href="https://satisfactory.wiki.gg/ru/">Русский</a></p>
+                            <p><a href="https://satisfactory.wiki.gg/wiki/Category:Translation_projects">other translation projects</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right">
+                    <div class="updates">
+                        <div class="updates-head">
+                            <h2>UPDATES</h2>
+                        </div>
+                        <div class = "updates-body">
+                            <img width="300" height="78" src ="Img/450px-Update1.2_Sign_Logo.webp">
+                            <p><strong> Major update:</strong> <a href="https://satisfactory.wiki.gg/wiki/Patch_1.2.2.2">1.2 release</a> (released 114 days ago)</p>
+                            <p><strong>Stable:</strong> <a href="https://satisfactory.wiki.gg/wiki/Patch_1.2.4.0">1.2.4.0</a>(released 44 days ago)</p>
+                            <p><strong>Experimental:</strong> <a href="https://satisfactory.wiki.gg/wiki/Patch_1.2.4.0">1.2.4.0</a>(released 44 days ago)</p>
+                            <p><a href="https://satisfactory.wiki.gg/wiki/Category:Patch_notes">Version history</a> • <a href="https://satisfactory.wiki.gg/wiki/Future_content">Future content</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class ="area"> 
+                <div class="col-left">
+                    <div class="about">
+                        <div class="about-head">
+                            <h2>ABOUT SATISFACTORY</h2>
+                        </div>
+                        <div class="about-body">
+                            <p><a href="https://satisfactory.wiki.gg/wiki/Satisfactory">Satisfactory</a> is a game from <a href="https://satisfactory.wiki.gg/wiki/Coffee_Stain_Studios">Coffee Stain Studios</a>, the creators of <a href="https://en.wikipedia.org/wiki/Goat_Simulator" class="Goat">Goat Simulator</a> and the <a href="https://sanctum.fandom.com/wiki/Sanctum_Wiki" class="Sanctum">Sanctum</a> series.<br>Satisfactory is a game of factory management and planet exploitation. As a pioneer working for <a href="https://satisfactory.wiki.gg/wiki/FICSIT_Inc.">FICSIT Inc.</a>, you<br>are dropped onto an alien planet with a handful of tools and must harvest the planet's natural resources to<br>construct increasingly complex factories for automating all your resources needs. After you are set up, it will be<br>time to build the<a href="https://satisfactory.wiki.gg/wiki/Space_Elevator">Space Elevator</a> and begin Project Assembly, supplying FICSIT with increasingly numerous and<br>complex components for their unknown purposes.</p>
+                            <p>The main focus of the game lies in constructing <a href="https://satisfactory.wiki.gg/wiki/Buildings">buildings</a> and linking them together with <a href="https://satisfactory.wiki.gg/wiki/Conveyor_Belts">Conveyor Belts</a> so that<br>your factory can handle the entire process of item construction for you, including mining, transport, delivery,<br> and generating <a href="https://satisfactory.wiki.gg/wiki/Power">power</a> to keep itself running. More advanced pioneers will precisely adjust their buildings' <a href="https://satisfactory.wiki.gg/wiki/Clock_speed">clock<br>speed</a> to maximize efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right">
+                    <div class="video">
+                        <div class="video-head"> 
+                            <h2>FEATURED VIDEO</h2>
+                        </div>
+                        <div class="video-body">
+                            <a href="#" target="_blank" class="video-placeholder" id="videoPlaceholder">
+                                <button class="load-video">Load video</button>
+                                <div class="video-source">YouTube</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class ="area"> 
+                <div class="col-left">
+                    <div class="features">
+                        <div class="features-head">
+                            <h2>FEATURES</h2>
+                        </div>
+                        <div class="features-body">
+                            <ul>
+                                <li>A variety of item and fluid logistics including <a href="https://satisfactory.wiki.gg/wiki/Conveyor_Belts">Conveyor Belts</a>,<a href="https://satisfactory.wiki.gg/wiki/Conveyor_Lifts">Lifts</a>, <a href="https://satisfactory.wiki.gg/wiki/Pipelines">Pipes</a> and more; all for transporting<br>resources, components, fluids or yourself around.</li>
+                                <li><a href="https://satisfactory.wiki.gg/wiki/Buildings">Buildings</a> for automated production of items. Hunt down <a href="https://satisfactory.wiki.gg/wiki/Power_Slug">Power Slugs</a> and <a href="https://satisfactory.wiki.gg/wiki/Somersloop">Somersloops</a> to improve their<br><a href="https://satisfactory.wiki.gg/wiki/Clock_speed">performance</a>.</li>
+                                <li>A vast alien <a href="https://satisfactory.wiki.gg/wiki/World">world</a> to explore and exploit, featuring beautiful vistas and curious <a href="https://satisfactory.wiki.gg/wiki/Creatures">creatures</a>, including the<br>community favorite <a href="https://satisfactory.wiki.gg/wiki/Lizard_Doggo">Lizard Doggo</a>.</li>
+                                <li><a href="https://satisfactory.wiki.gg/wiki/Vehicles">Vehicles</a>, including <a href="https://satisfactory.wiki.gg/wiki/Truck">trucks</a> and <a href="https://satisfactory.wiki.gg/wiki/Electric_Locomotive">trains</a> for transporting yourself and large quantities of resources over great<br>distances.</li>
+                                <li>A <a href="https://satisfactory.wiki.gg/wiki/Story">story</a> to uncover - what is the 'Save the Day' program, and why is FICSIT counting on you?</li>
+                                <li><a href="https://satisfactory.wiki.gg/wiki/Settings#Arachnophobia_mode">Arachnophobia Mode</a>, to turn <a href="https://satisfactory.wiki.gg/wiki/Stinger">scary spiders</a> into equally terrifying cat abominations.</li>
+                                <li>No base defense.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="featuresarticles">
+                        <div class="featuresarticles-head">
+                            <h2>FEATURES ARTICLES</h2>
+                        </div>
+                        <div class="featuresarticles-body">
+            
+                            <a href="https://satisfactory.wiki.gg/wiki/MAM" target="_blank" class="Images">
+                                <img src="Img/150px-MAM.webp" alt="MAM">
+                                <span>MAM</span>
+                            </a>
+                            
+                            <a href="https://satisfactory.wiki.gg/wiki/Coal-Powered_Generator" target="_blank" class="Images">
+                                <img src="Img/150px-Coal-Powered_Generator.webp" alt="Coal Powered Generator">
+                                <span>Coal-Powered Generator</span>
+                            </a>
+                            
+                            <a href="https://satisfactory.wiki.gg/wiki/Hard_Drive" target ="_blank" class="Images">
+                                <img src="Img/150px-Hard_Drive.webp" alt="Hard Drive">
+                                <span>Hard Drive</span>
+                            </a>
+                            
+                            <a href="https://satisfactory.wiki.gg/wiki/Lizard_Doggo" target="_blank" class="Images">
+                                <img src="Img/150px-Lizard_Doggo.webp" alt="Lizard Doggo">
+                                <span>Lizard Doggo</span>
+                            </a>
+                            
+                            <a href="https://satisfactory.wiki.gg/wiki/Power" target="_blank" class="Images">
+                                <img src="Img/150px-Power_Line.webp" alt="Power">
+                                <span>Power</span>
+                            </a>
+                            
+                            <a href="https://satisfactory.wiki.gg/wiki/Space_Elevator" target="_blank" class="Images">
+                                <img src="Img/150px-Space_Elevator.webp" alt="Space Elevator">
+                                <span>Space Elevator</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right">
+                    <div class="socialmedia">
+                        <div class="socialmedia-head">
+                            <h2>SOCIAL MEDIA</h2>
+                        </div>
+                        <div class="socialmedia-body">
+                            <div class ="Images-head">
+                                <a href="https://www.satisfactorygame.com" target="_blank"></a><img width ="48" height="48" src="Img/72px-Satisfactory_logo_full_color_square.webp"></a>
+                                <a href="https://lizarddoggo.com/en-eu" target="_blank"><img width ="48" height="48" src="Img/72px-Lizard_Doggo.webp"></a>
+                                <a href="https://store.steampowered.com/app/526870/Satisfactory/" target="_blank"><img width ="48" height="48" src="Img/Steam.svg"></a>
+                                <a href="https://store.epicgames.com/p/satisfactory?lang=en-US" target="_blank"><img width ="48" height="48" src="Img/Epic_Games.svg"></a>
+                                <a href="https://www.humblebundle.com/store/satisfactory" target="_blank"><img width="48" height="48" src="Img/Humble.svg"></a> 
+                            </div>
+                            <div class="hr"></div>
+                            <div class ="Images-body">
+                                <a href="https://www.youtube.com" target="_blank"><img width ="48" height="33" src="Img/YouTube.svg"></a>
+                                <a href="https://www.twitch.tv/coffeestainstudiosdevs" target="_blank"><img width ="48" height="51" src="Img/Twitch.svg"></a>
+                                <a href="https://discord.com/store" target="_blank"><img width ="48" height="37" src="Img/Discord.svg"></a>
+                                <a href="http://www-facebook.com" target="_blank"><img width ="48" height="48" src="Img/Facebook.svg"></a>
+                                <a href="https://instagram-my.tw1.ru/help/instagram-login-my-page/" target="_blank"><img width ="48" height="48" src="Img/Instagram.svg"></a>
+                                <a href="https://www.reddit.com/r/SatisfactoryGame/" target="_blank"><img width ="48" height="48" src="Img/Reddit.svg"></a>
+                                <a href="https://x.com/home" target="_blank"><img width ="48" height="49" src="Img/X.svg"></a>
+                                <a href="https://www.tiktok.com/@satisfactorygame" target="_blank"><img width ="48" height="45" src="Img/TikTok.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-block">
+                <div class="navigation-head">
+                    <h2>NAVIGATION</h2>
+                    <div class="nav-head-line"></div>
+                </div>
+                <div class="navigation-table">
+                    <div class="nav-row">
+                        <span class="nav-controls">
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav" title="View">v</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav?action=edit" title="Edit">e</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:BuildingNav?action=history" title="History">h</a>
+                        </span>
+                        <span class="nav-title">
+                            <a href="https://satisfactory.wiki.gg/wiki/Buildings">Buildings</a>
+                        </span>
+                        <span class="nav-expand">
+                            <span class="bracket">[</span><a href="#">Expand</a><span class="bracket">]</span>
+                        </span>
+                    </div>
+                    <div class="nav-row">
+                        <span class="nav-controls">
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav" title="View">v</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=edit" title="Edit">e</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:PioneerNav?action=history" title="History">h</a>
+                        </span>
+                        <span class="nav-title">
+                            <a href="https://satisfactory.wiki.gg/wiki/Satisfactory">Satisfactory</a> game mechanics      
+                        </span>
+                        <span class="nav-expand">
+                            <span class="bracket">[</span><a href="#">Expand</a><span class="bracket">]</span>
+                        </span>
+                    </div>
+                    <div class="nav-row">
+                        <span class="nav-controls">
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:ItemNav" title="View">v</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:ItemNav?action=edit" title="Edit">e</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:ItemNav?action=history" title="History">h</a>
+                        </span>
+                        <span class="nav-title">
+                            <a href="https://satisfactory.wiki.gg/wiki/Category:Items">Items</a> and <a href="https://satisfactory.wiki.gg/wiki/Fluids">Fluids</a> 
+                        </span>
+                        <span class="nav-expand">
+                            <span class="bracket">[</span><a href="#">Expand</a><span class="bracket">]</span>
+                        </span>
+                    </div>
+                    <div class="nav-row">
+                        <span class="nav-controls">
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:LifeNav" title="View">v</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:LifeNav?action=edit" title="Edit">e</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:LifeNav?action=history" title="History">h</a>
+                        </span>
+                        <span class="nav-title">
+                            <a href="https://satisfactory.wiki.gg/wiki/Flora">Flora</a> and <a href="https://satisfactory.wiki.gg/wiki/Creatures">Fauna</a>  
+                        </span>
+                        <span class="nav-expand">
+                            <span class="bracket">[</span><a href="#">Expand</a><span class="bracket">]</span>
+                        </span>
+                    </div>
+                    <div class="nav-row">
+                        <span class="nav-controls">
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:VehicleNav" title="View">v</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:VehicleNav?action=edit" title="Edit">e</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:VehicleNav?action=history" title="History">h</a>
+                        </span>
+                        <span class="nav-title">
+                            <a href="https://satisfactory.wiki.gg/wiki/Vehicles">Transportation</a>
+                        </span>
+                        <span class="nav-expand">
+                            <span class="bracket">[</span><a href="#">Expand</a><span class="bracket">]</span>
+                        </span>
+                    </div>
+                    <div class="nav-row">
+                        <span class="nav-controls">
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav" title="View">v</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=edit" title="Edit">e</a>
+                            <span class="dot">·</span>
+                            <a href="https://satisfactory.wiki.gg/wiki/Template:PatchesNav?action=history" title="History">h</a>
+                        </span>
+                        <span class="nav-title">
+                            <a href="https://satisfactory.wiki.gg/wiki/Category:Patch_notes">Patches</a>
+                        </span>
+                        <span class="nav-expand">
+                            <span class="bracket">[</span><a href="#">Expand</a><span class="bracket">]</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="Community">
+                <div class="community-head">
+                    <h2>COMMUNITY</h2>
+                </div>
+                <div class="community-body">
+                    <div class="community-buttons">
+                        <a href="https://satisfactory.wiki.gg/wiki/Special:CreateAccount" class="community-btn">Register</a>
+                        <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Community_portal" class="community-btn">How to help</a>
+                        <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki:Style_guide" class="community-btn">Style guide</a>
+                    </div>
+                    <div class="hr1"></div>
+                    <p class="community-text">
+                        To write a new article, just enter the article title in the box below or in the search box at the top of the page.
+                    </p>
+                    <div class="create-page">
+                        <button>Create page</button>
+                    </div>
+                    <div class="hr1"></div>
+                    <div class="community-list">
+                        <p class="community-list-title">
+                            <span class="adding">•</span> Adding content
+                        </p>
+                        <ul>
+                            <li>If you are unsure of what to do or how to create a page, search for a few articles on the same topic and see what they look like. You can always view the source code in a wiki and learn from what others have done.</li>
+                            <li>An edit doesn't have to be massive; if you feel you don't want to create whole articles, then just fixing spelling errors and broken links is enough.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            <p class="main-page-sections">
+                Main page sections:
+                <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/Top_section">Top</a> ·
+                <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/Flex_section">Flex</a> ·
+                <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/Nav_section">Nav</a> ·
+                <a href="https://satisfactory.wiki.gg/wiki/Satisfactory_Wiki/Bottom_section">Bottom</a>.
+                Changes for the main page can be proposed <a href="https://satisfactory.wiki.gg/wiki/Talk:Satisfactory_Wiki">here</a>.
+            </p>
+            <div class="community-category">
+                <a href="https://satisfactory.wiki.gg/wiki/Special:Categories">Category</a>: <a href="https://satisfactory.wiki.gg/wiki/Category:Satisfactory_Wiki">Satisfactory Wiki</a>
+            </div>
+            <div class="bunner-com">
+                <a href="#">Реклама</a>
+            </div>          
+        </div>
+        <div class="footer">
+            <p class="footer-info">
+                This page was last edited on 8 November 2024, at 01:21.
+            </p>
+            <p class="footer-info">
+                Pages that were created prior to March 2023 are adapted from the Satisfactory Fandom wiki.<br>
+                Page content is under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 License</a> unless otherwise noted.
+            </p>
+            <div class="footer-links">
+                <a href="https://www.indie.io/terms-of-service/">Terms of Service</a>
+                <a href="https://www.indie.io/privacy-policy/">Privacy policy</a>
+                <a href="https://support.wiki.gg">Support Wiki</a>
+                <a href="https://indieio.atlassian.net/servicedesk/customer/portal/3">Send a ticket to wiki.gg</a>
+                <a href="#">Status page</a>
+            </div>
+            <div class="footer-img">
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                    <img  width="100" src="Img/CC-BY-NC-SA_footer_badge_dark.svg">
+                </a>
+                <a href="https://www.mediawiki.org/wiki/MediaWiki" target="_blank">
+                    <img width="100" src="Img/MediaWiki_footer_badge_dark.svg">
+                </a>
+                <a href="https://www.wiki.gg" target="_blank">
+                    <img width="100" src="Img/PartOf.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.load-video').addEventListener('click', function(){
+        const placeholder = document.querySelector('.video-placeholder');
+        placeholder.innerHTML = `
+            <iframe 
+                width="100%" 
+                height="270" 
+                src="https://youtu.be/aoHCYhlYjlc?si=-Npo0a6aH16asPIi" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media; fullscreen"
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; border-radius: 4px;">
+            </iframe>
+        `;
+        });
+    </script>
+</body>
+</html>
